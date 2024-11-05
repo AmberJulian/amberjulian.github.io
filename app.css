@@ -1,25 +1,73 @@
 /* styles.css */
 
 /* Reset some default styles */
-body, h1, h2, h3, p, ul {
+
+* {
     margin: 0;
     padding: 0;
-    list-style-type: none;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
 }
 
 header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
+    height: 100vh;
+    /* Full viewport height */
+    background-color: #7BD3EA;
+    /*   background-image: url('your-image.jpg'); /* Add a background image */
+    background-size: cover;
+    /* Cover the whole area */
+    background-position: center;
+    /* Center the image */
+    display: flex;
+    /*   flex-direction: column;*/
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    position: relative;
 }
+
+header .headerText {
+    background-color: rgba(255, 255, 255, 0.104);
+    position: absolute;
+    text-align: right;
+    right: 50vw;
+}
+
+header .headerImage {
+    background-color: rgba(210, 249, 54, 0.302);
+    position: absolute;
+    text-align: left;
+    left: 50vw;
+}
+
+header div {
+    width: 100%;
+    height: 100%;
+}
+
+header h2 {
+
+    margin-bottom: 0.5rem;
+    /* Adjust space below h1 */
+}
+
+header p {
+
+    margin-bottom: 0.5rem;
+    /* Adjust space below h1 */
+}
+
+
+
+
+/* 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #A1EEBD;
+    color: #333;
+}
+
 
 header h1 {
     margin-bottom: 10px;
@@ -103,8 +151,8 @@ form button:hover {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #35424a;
-    color: #ffffff;
+    background: #F6F7C4;
+    color: #000000;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -122,4 +170,4 @@ footer ul li {
 footer a {
     color: #ffffff;
     text-decoration: none;
-}
+}*/
