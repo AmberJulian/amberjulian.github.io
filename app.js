@@ -4,62 +4,59 @@ document.addEventListener("DOMContentLoaded", async () => {
     var headerTextTwo = document.getElementById("headerTextTwo");
     var headerImage = document.getElementById("headerImage");
 
-    headerImage.onload = () => {
-        console.log("loaded");
-    }
-
     var chevDown = document.getElementById("chevDown");
-    var useAlternativeCall = false;
 
     headerTextOne.style.opacity = 1;
-    //Delay to try fix issues on refresh
-    await delay(0.1);
-    console.log("1")
 
+    await waitForOpacity(headerTextOne, 1);
 
-    //Listen for the header 1 to be finished fading in
-    headerTextOne.addEventListener("transitionend", async () => {
-
-        console.log("reached");
+    async function fadeInPlayer() {
         headerImage.style.opacity = 1;
         headerImage.style.animationPlayState = "running";
         await delay(0.9);
         headerImage.style.animationPlayState = "paused";
-
-        await delay(0.2);
-        //Fade in second lot of text
-        headerTextTwo.style.opacity = 1;
         return true;
-    });
+    };
 
+    await fadeInPlayer();
+    await delay(0.2);
+
+    headerTextTwo.style.opacity = 1;
+    await waitForOpacity(headerTextTwo, 1);
     //Wait for second lot of text to fully fade in, 
     // and set about fading in the downswards chevron
-    headerTextTwo.addEventListener("transitionend", async () => {
-        await delay(0.9);
-        chevDown.style.opacity = 1;
-        chevDown.style.animationPlayState = "running";
-        return true;
-    });
+    await delay(0.9);
+    chevDown.style.opacity = 1;
+    chevDown.style.animationPlayState = "running";
     return true;
-});
-
-
-
-
-window.addEventListener("load", async () => {
-    console.log("Everything is loaded, including images and styles.");
-    // Your code here
-    //Listen for the header 1 to be finished fading in
-    return true;
-
 });
 
 function delay(seconds) {
     return new Promise(resolve => setTimeout(resolve, seconds * 1000));
 }
 
+function waitForOpacity(element, targetOpacity = 1) {
+    return new Promise((resolve, reject) => {
+        // Check if the element is in the DOM
+        if (!element) {
+            reject(new Error("Element not found"));
+            return;
+        }
 
+        // Function to check if opacity has reached the target
+        function checkOpacity() {
+            const currentOpacity = parseFloat(window.getComputedStyle(element).opacity);
+            if (currentOpacity === targetOpacity) {
+                resolve(); // Resolve when the opacity reaches the target
+            } else {
+                requestAnimationFrame(checkOpacity); // Keep checking
+            }
+        }
 
+        // Start checking the opacity
+        checkOpacity();
+    });
+}
 
 
 document.addEventListener("DOMContentLoaded", () => {
