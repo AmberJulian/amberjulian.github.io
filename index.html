@@ -5,80 +5,298 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amber Julian - Portfolio</title>
+    <!--CSS import-->
     <link rel="stylesheet" href="app.css">
+    <!--JS import-->
+    <script src="app.js"></script>
+
+    <!--Nunito Import-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <!--Full Page Header-->
-    <header class="fullPageHeader">
+    <header class="fullPageHeader" id="header">
         <!--Header Container-->
-        <div class="headerText">
-            <h1>Hi, I'm Amber!</h1>
-            <p>I'm a Fullstack Developer and a Game Developer</p>
-            <h2>Lovely to meet you!</h2>
+        <div class="characterContainer">
+            <div class="headerText">
+                <h1 id="headerTextOne" class="fadeIn">Hi, I'm Amber!</h1>
+                <h3 id="headerTextTwo" class="fadeIn">I'm a Game Developer transitioning to Web Development!</h2>
+            </div>
+            <div id="headerImage" class="headerImage">
+                <img id="amberPicture" src="Resources/AmberPicture.png" alt="Description of the image">
+            </div>
         </div>
-        <div class="headerImage">
-            <img src="Resources/AmberPicture.png" alt="Description of the image" width="300" height="auto">
 
-        </div>
-    </header>
+        <img id="chevDown" class="fadeInFast" src="Resources/chevron-down-icon.png" alt="Description of the image">
+
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#greeting">Greeting</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! I am a passionate web developer with a knack for creating stunning websites and
-            applications. With experience in HTML, CSS, JavaScript, and more, I bring ideas to life through code.</p>
-    </section>
+    <div id="betweenHeaderAndProjects"> </div>
+
 
     <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Project Title 1</h3>
-            <p>A brief description of this project. What technologies were used, what was your role, etc.</p>
-            <a href="http://link-to-project.com" target="_blank">View Project</a>
+        <div class="verticalSpacerTwo"></div>
+        <div class="verticalSpacerTwo"></div>
+        <div id="projectsContainer">
+            <div class="verticalSpacerOne"></div>
+            <h2>Projects</h2>
+            <p>Check out my LinkedIn or Resume for more!</p>
+            <div class="verticalSpacerTwo"></div>
+            <div class="webDev">
+                <h3>Web Dev</h3>
+                <div class="rightBorderedDiv">
+                    <h4>Presently studying <a href="https://www.udemy.com/course/the-web-developer-bootcamp/"
+                            target="_blank">The Web Developer BootCamp 2024</a></h4>
+                    <h5>Oct 2024 - Present</h5>
+                    <div class="projectContentContainer">
+                        <img class="projectContentContainerImg" src="Resources/Bootcamp.png"
+                            alt="Image of portfolio site">
+                        <p>
+                            This course by Colt Steele was recommended highly
+                            by friends and the internet.
+                            I've found the content intuitive and relatable to previous work.
+                            For
+                            the
+                            last sections, Colt has created a long code-along section to create a full CRUD site.
+                            I can't wait to put the backend stuff I've already learnt into practice!
+                        </p>
+                        <h5>Technologies:</h5>
+                        <h5>HTML, CSS, Javascript, Node.js, Express, MongoDB, Mongoose, NoSQL</h5>
+                    </div>
+                </div>
+                <div class="leftBorderedDiv">
+                    <h4>Portfolio Website (This Site)</h4>
+                    <h5>November 2024</h5>
+                    <div class="projectContentContainer">
+                        <img class="projectContentContainerImg" src="Resources/Website.png"
+                            alt="Image of portfolio site">
+                        <p>This site was my first attempt at designing and creating a website with no tutorial,
+                            and I loved every minute of it! Compared to game dev, I found CSS faster to build up and try
+                            things out than in my previous stack in the Unity Engine. While the thought processes to
+                            building a
+                            site are similar, they present new challenges such as making parts of the site move
+                            depending on screen resolution.
+                        </p>
+                        <h5>Technologies: HTML, CSS, Javascript, Git</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="verticalSpacerOne"></div>
+            <div class="verticalSpacerTwo"></div>
+            <div class="GameDeveloper">
+                <h3>Game Programmer</h3>
+                <div class="rightBorderedDiv">
+                    <h4>Wedding Planner</h4>
+                    <h5>Jun 2023 -Mar 2024</h5>
+                    <div class="projectContentContainer">
+                        <iframe class="iframeVideo" src="https://www.youtube.com/embed/2Q7cdaMr97Y?si=xpr9gAPl9FUu6COc"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>This is a highly polished mobile game about fixing wedding venues by solving Match 3 puzzles.
+                            I worked with other gameplay engineers and people from other disciplines to create
+                            mesmerising effects,
+                            gameplay and content. We built Wedding Planner in an impressive timeframe using our
+                            learnings
+                            creating a similar game based on the Legally Blonde franchise.</p>
+                        <h5>Technologies: Unity, C#, FMOD, Firebase, Jira, Git, Github, Team City, Azure Functions</h5>
+                        <div class="playStoreIconHolder">
+                            <a href="https://apps.apple.com/au/app/wedding-planner-perfect-match/id6453022498"
+                                target="_blank">
+                                <img src=" Resources/Appstore.svg" alt="Wedding Planner On AppStore Picture"
+                                    style="height: 50px"">
+                            </a>
+                            <a href="
+                                    https://play.google.com/store/apps/details?id=com.playsidestudios.weddingplanner&hl=en_AU"
+                                    target="_blank">
+                                <img src=" Resources/GooglePlay.png" alt="Wedding Planner On Google Play Picture"
+                                    style="height: 50px">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="leftBorderedDiv">
+                    <h4>Legally Blonde</h4>
+                    <h5>Jan 2023-Jun 2023</h5>
+                    <div class="projectContentContainer">
+                        <iframe class="iframeVideo" src="https://www.youtube.com/embed/AJVcAJyMQ5Y?si=3aR41U355Hc7hJNE"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>This is a narrative driven match 3 puzzle game for mobile created in Unity. A large part of
+                            this
+                            game was creating new obstacles for the Match 3 game and creating tools for designers to
+                            work
+                            with to create narrative. I was one of the engineers on the project. </p>
+                        <h5>Technologies: Unity, C#, LUA, Typescript, FMOD, Firebase, Jira, Git, Github, Team City </h5>
+                        <div class="playStoreIconHolder">
+                            <a href="
+                            https://apps.apple.com/au/app/legally-blonde-the-game/id1565262721" target="_blank">
+                                <img src="Resources/Appstore.svg" alt="Legally Blonde On App Store Picture"
+                                    style="height: 50px"">
+                            </a>
+                            <a href="
+                                    https://play.google.com/store/apps/details?id=com.playsidestudios.legallyblonde&hl=en_AU"
+                                    target="_blank">
+                                <img src=" Resources/GooglePlay.png" alt="Legally Blonde On Google Play Picture"
+                                    style="height: 50px">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="verticalSpacerOne"></div>
+            <div class="verticalSpacerTwo"></div>
+            <div class="Game Engineer Management">
+                <h3>Engineering Manager</h3>
+
+                <div class="rightBorderedDiv">
+                    <h4>Dumb Ways Free For All</h4>
+                    <h5>Mar 2024 - Present</h5>
+                    <div class="projectContentContainer">
+
+                        <iframe class="iframeVideo" src="https://www.youtube.com/embed/waKAtVn8v64?si=kDC3YQv4MnWlUXma"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+                        <p>Dumb Ways Free For All is an online mulitplayer VR party game for Quest 3. Players are thrown
+                            into
+                            the
+                            Dumb Ways
+                            universe and compete against eachother in hilarious challenges, such as crab bowling. I work
+                            closely
+                            with my reporting engineers to retain moral, create focused learning and
+                            development
+                            plans, performance review. I communicate out the challenges that happen in this game in
+                            order to
+                            bring
+                            learnings and opportunities to other games in the business unit. </p>
+
+                        <a href="https://www.meta.com/en-gb/experiences/dumb-ways-free-for-all/7763282913797845/">Meta
+                            Store
+                            Page</a>
+
+                    </div>
+                </div>
+
+                <div class="leftBorderedDiv">
+                    <h4>Dumb Ways to Survive</h4>
+                    <h5>Mar 2024 - Present</h5>
+                    <div class="projectContentContainer">
+
+                        <iframe class="iframeVideo" src="https://www.youtube.com/embed/d9bRM27QjuY?si=_jY0qE0jCLfnVDoa"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>Dumb Ways To Survive is a mobile game created for Netflix
+                            where players crafts, collect, and combat to progressively challenge tougher
+                            environments
+                            and
+                            explore. I work closely with my reporting engineers to retain moral, create focused
+                            learning
+                            and
+                            development
+                            plans, performance review, and aid in technical production.</p>
+                        <div class="playStoreIconHolder">
+                            <a href="
+                            https://apps.apple.com/au/app/dumb-ways-to-survive-netflix/id6450126023" target="_blank">
+                                <img src="Resources/Appstore.svg" alt="Description of SVG" style="height: 50px"">
+                            </a>
+                            <a href="
+                                    https://play.google.com/store/apps/details?id=com.netflix.NGP.DumbWaysToSurvive&hl=en_AU"
+                                    target="_blank">
+                                <img src=" Resources/GooglePlay.png" alt="Description of SVG" style="height: 50px">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="project">
-            <h3>Project Title 2</h3>
-            <p>A brief description of this project. What technologies were used, what was your role, etc.</p>
-            <a href="http://link-to-project.com" target="_blank">View Project</a>
+        <div class="verticalSpacerOne">
         </div>
+
+
         <!-- Add more projects as needed -->
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="your-form-handler.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+    <div id="betweenProjectsAndTechStack">
+    </div>
+    <section id="techStack">
+        <div class="verticalSpacerOne">
+        </div>
+        <div id="techStackContainer">
+            <div class="verticalSpacerOne"></div>
+            <h2>
+                Tech Stack
+            </h2>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <div class="techStackStack">
+                <div class="verticalSpacerOne"></div>
+                <p>
+                    <b> Front End:</b> HTML, CSS, JavaScript.
+                </p>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+                <p>
+                    <b> Back End:</b> Node.js, Express, MongoDB, Mongoose, NoSQL, Google Firebase.
 
-            <button type="submit">Send Message</button>
-        </form>
+                </p>
+                <p>
+                    <b> Productivity:</b> Git, Sourcetree/Fork, Github, Jira/Hansoft.
+                </p>
+
+                <p>
+                    <b>Other:</b> C#, C++, Unity, Unity .NET, FMOD, Unity Analytics, LUA, TeamCity
+                </p>
+                <p>
+                    I'm also highly experienced in <b> agile</b> methodologies.
+                </p>
+                <div class="verticalSpacerOne"></div>
+            </div>
+            <div class="verticalSpacerOne"></div>
+        </div>
+        <div class="verticalSpacerOne">
+        </div>
+
     </section>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-        <ul>
-            <li><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-            <!-- Add other social links as needed -->
-        </ul>
+
+    <div id="betweenProjectsAndContact"> </div>
+
+
+    <footer class="verticalSpacerTwo">
+
+        <h2>Contact Me</h2>
+        <div class="flexRow">
+            <a href="https://www.linkedin.com/in/amber-julian-43a814174/" target="_blank">
+                <img src="Resources/LinkedIn.svg" alt="LinkedIn" width="50" height="50">
+            </a>
+
+            <a href="mailto:amberjulianwebdev@gmail.com" target="_blank">
+                <img src="Resources/Email.svg" alt="LinkedIn" width="50" height="50">
+            </a>
+
+            <a href="https://github.com/AmberJulian" target="_blank">
+                <img src="Resources/GitHub.svg" alt="Github" width="46" height="46">
+            </a>
+        </div>
+        <div class="verticalSpacerTwo"> </div>
     </footer>
+
+
 </body>
 
 </html
