@@ -1,16 +1,26 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const headerTextOne = document.getElementById("headerTextOne");
-    const headerTextTwo = document.getElementById("headerTextTwo");
-    const headerImage = document.getElementById("headerImage");
-    var chevDown = document.getElementById("chevDown");
-    headerTextOne.style.opacity = 1;
+    var headerTextOne = document.getElementById("headerTextOne");
+    var headerTextTwo = document.getElementById("headerTextTwo");
+    var headerImage = document.getElementById("headerImage");
 
+    headerImage.onload = () => {
+        console.log("loaded");
+    }
+
+    var chevDown = document.getElementById("chevDown");
+    var useAlternativeCall = false;
+
+    headerTextOne.style.opacity = 1;
     //Delay to try fix issues on refresh
     await delay(0.1);
+    console.log("1")
+
 
     //Listen for the header 1 to be finished fading in
     headerTextOne.addEventListener("transitionend", async () => {
+
+        console.log("reached");
         headerImage.style.opacity = 1;
         headerImage.style.animationPlayState = "running";
         await delay(0.9);
@@ -19,6 +29,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         await delay(0.2);
         //Fade in second lot of text
         headerTextTwo.style.opacity = 1;
+        return true;
     });
 
     //Wait for second lot of text to fully fade in, 
@@ -27,12 +38,27 @@ document.addEventListener("DOMContentLoaded", async () => {
         await delay(0.9);
         chevDown.style.opacity = 1;
         chevDown.style.animationPlayState = "running";
+        return true;
     });
+    return true;
+});
+
+
+
+
+window.addEventListener("load", async () => {
+    console.log("Everything is loaded, including images and styles.");
+    // Your code here
+    //Listen for the header 1 to be finished fading in
+    return true;
+
 });
 
 function delay(seconds) {
     return new Promise(resolve => setTimeout(resolve, seconds * 1000));
 }
+
+
 
 
 
@@ -62,6 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeInElements.forEach(element => {
         observer.observe(element);
     });
+
+    return true;
 });
 
 
