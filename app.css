@@ -73,7 +73,7 @@ header .characterContainer {
     width: 50vw;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 800px) and (orientation: portrait) {
     header .characterContainer {
         flex-direction: column;
     }
@@ -130,6 +130,7 @@ header .headerImage {
     animation-play-state: paused;
     /* Start paused */
 
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,6 +141,9 @@ header .headerImage img {
     width: 20em !important;
     margin: 5em;
     margin-left: 3em;
+
+    max-width: 60vh;
+
 }
 
 @media (max-width: 800px) {
@@ -159,6 +163,7 @@ header .headerImage img {
     top: 90vh;
     left: 50vw - 40px;
     width: 80px;
+    max-width: 18vh;
 
     animation: bounceSmall 1.5s infinite;
     animation-play-state: paused;
