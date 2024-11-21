@@ -109,6 +109,7 @@ header .headerText h1 {
     header .headerText {
         width: 20em;
         margin: 0.5em;
+        margin-top: -40px;
     }
 }
 
@@ -145,6 +146,7 @@ header .headerImage img {
     header .headerImage img {
         width: 16em !important;
         margin-left: 7em;
+        margin: 3em;
     }
 }
 
@@ -160,6 +162,12 @@ header .headerImage img {
 
     animation: bounceSmall 1.5s infinite;
     animation-play-state: paused;
+}
+
+@media (max-width: 800px) {
+    #chevDown {
+        top: 85vh;
+    }
 }
 
 #betweenHeaderAndProjects {
@@ -281,7 +289,7 @@ header .headerImage img {
 
 .projectContentContainerImg {
     position: relative;
-    width: 70%;
+    width: 80%;
 
     margin-top: 20px;
 
@@ -291,7 +299,7 @@ header .headerImage img {
 
 .iframeVideo {
     position: relative;
-    width: 70%;
+    width: 80%;
 
     margin-top: 20px;
 
@@ -305,13 +313,13 @@ header .headerImage img {
     flex: 2;
 
     margin: 10px;
-    max-width: 70%;
+    max-width: 80%;
 }
 
 
 .projectContentContainer h5 {
     flex: 2;
-    max-width: 70%;
+    max-width: 80%;
     position: relative;
 }
 
@@ -353,6 +361,24 @@ header .headerImage img {
     border-radius: 15px;
     border: 5px solid #F6F7C4;
     width: 30em;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.techStackStack p {
+    max-width: 80%;
+    margin: 2px;
+}
+
+.techStackStack p:first-of-type {
+    margin-top: 10px;
+}
+
+.techStackStack p:last-of-type {
+    margin-bottom: 10px;
 }
 
 @media (max-width: 800px) {
