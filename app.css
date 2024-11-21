@@ -59,6 +59,8 @@ header {
     vertical-align: center;
 }
 
+
+
 header .characterContainer {
     justify-content: center;
     align-items: center;
@@ -70,6 +72,13 @@ header .characterContainer {
 
     width: 50vw;
 }
+
+@media (max-width: 800px) {
+    header .characterContainer {
+        flex-direction: column;
+    }
+}
+
 
 header .headerText {
 
@@ -89,14 +98,28 @@ header .headerText h1 {
     margin: 0.5em;
 }
 
+@media (max-width: 1024px) {
+    header .headerText {
+        width: 20em;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 800px) {
+    header .headerText {
+        width: 20em;
+        margin: 0.5em;
+    }
+}
+
 header .headerText h3 {
 
     background-color: rgba(255, 255, 255, 0.104);
     border-radius: 15px;
+    width: 18em;
 }
 
 header .headerImage {
-    width: 33em;
     opacity: 0;
     transition: opacity 0.2s ease-in;
     /* Fade in over 2 seconds */
@@ -105,13 +128,24 @@ header .headerImage {
     /* Default to bouncing */
     animation-play-state: paused;
     /* Start paused */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 header .headerImage img {
     width: 20em !important;
+    margin: 5em;
+    margin-left: 3em;
+}
 
-    margin: 3em;
-    display: inline-block;
+@media (max-width: 800px) {
+    header .headerImage img {
+        width: 16em !important;
+        margin-left: 7em;
+    }
 }
 
 #amberPicture {
@@ -157,6 +191,18 @@ header .headerImage img {
     border: 5px solid #50fd90ae;
 }
 
+@media (max-width: 1224px) {
+    #projectsContainer {
+        width: 80%;
+    }
+}
+
+@media (max-width: 800px) {
+    #projectsContainer {
+        width: 90%;
+    }
+}
+
 #projectsContainer h4 {
     flex: 2;
     margin: 5px;
@@ -164,7 +210,7 @@ header .headerImage img {
 }
 
 .rightBorderedDiv {
-    width: 70%;
+    width: 80%;
     left: 5%;
     position: relative;
 
@@ -189,8 +235,8 @@ header .headerImage img {
 }
 
 .leftBorderedDiv {
-    width: 70%;
-    left: 25%;
+    width: 80%;
+    left: 15%;
     position: relative;
     text-align: justify;
     flex-direction: column;
@@ -209,6 +255,18 @@ header .headerImage img {
 
     opacity: 0;
     transition: opacity 0.5s ease-in;
+}
+
+@media (max-width: 800px) {
+    .leftBorderedDiv {
+        width: 90%;
+        left: 5%;
+    }
+
+    .rightBorderedDiv {
+        width: 90%;
+        left: 5%;
+    }
 }
 
 
@@ -272,7 +330,6 @@ header .headerImage img {
     text-align: center;
     align-items: center;
     justify-content: center;
-
 }
 
 #techStackContainer {
@@ -280,7 +337,7 @@ header .headerImage img {
     align-items: center;
     flex-direction: column;
 
-    width: 30%;
+    width: 35em;
     background: transparent;
     background-color: #f0f0f06a;
 
@@ -296,6 +353,18 @@ header .headerImage img {
     border-radius: 15px;
     border: 5px solid #F6F7C4;
     width: 30em;
+}
+
+@media (max-width: 800px) {
+
+    #techStackContainer {
+        width: 90%;
+    }
+
+    .techStackStack {
+
+        width: 90%;
+    }
 }
 
 #betweenProjectsAndContact {
@@ -349,6 +418,9 @@ img {
     width: 100px position: static
 }
 
+
+
+
 h1 {
     font-size: 60px;
 }
@@ -373,4 +445,23 @@ a {
     color: black;
     font-weight: bold;
     text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+
 }
